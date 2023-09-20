@@ -5,12 +5,12 @@ FROM node
 WORKDIR /app
 
 # Install dependencies
-COPY package*.json ./
+COPY backend/package*.json ./
 
 RUN npm install
 
 # Copy your application code into the container
-COPY . .
+COPY backend ./
 
 # Expose the port your Express app will run on
 EXPOSE 3000
