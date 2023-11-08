@@ -12,6 +12,8 @@ app.use(express.json());
 
 app.use("/teachers", require("./routes/teacherRoutes"));
 
+app.use("/grades", require("./routes/gradeRoutes"));
+
 app.use(errorHandler);
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
