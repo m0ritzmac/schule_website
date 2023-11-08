@@ -1,9 +1,8 @@
 version: '3'
 services:
-  app:
+  backend:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ./backend
     ports:
       - "3000:3000"
     depends_on:
