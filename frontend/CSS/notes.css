@@ -14,6 +14,11 @@
 
 body {
     background-color: black;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
 }
 
 
