@@ -5,3 +5,15 @@
     font-family: sans-serif;
 }
 
+.header{
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: black;
+}
+
+

@@ -13,7 +13,7 @@
 }
 
 body {
-    /* background-color: aqua; */
+    background-color: black;
 }
 /*---Nav---*/
 
@@ -23,9 +23,8 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 8%;
+    padding: 0% 5%;
     transition: background 1s;
-    background-color: black;
 }
 
 /*---Banner---*/
@@ -81,7 +80,7 @@ nav{
     position: relative;
     background-image: url('images/hero-background.jpg');
     background-size: cover;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     padding: 100px 0;
     overflow: hidden;
@@ -107,7 +106,7 @@ nav{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 65px;
-    grid-row-gap: 200px;
+    grid-row-gap: 40px;
     grid-auto-rows: minmax(100px, auto);
     margin: 40px auto 0;
     max-width: 800px;
@@ -116,7 +115,7 @@ nav{
 }
 
 .card {
-    height: 170%;
+    height: 100%;
     width: 120%;
     display: flex;
     flex-direction: column;
@@ -130,27 +129,27 @@ nav{
 }
 
 .card1 {
-    background-color: rgb(255, 128, 0);
+    background-color: rgb(224, 174, 234)
 }
 
 .card2 {
-    background-color: rgb(255, 204, 0);
+    background-color: rgb(224, 174, 234)
 }
 
 .card3 {
-    background-color: rgb(76, 0, 255);
+    background-color: rgb(224, 174, 234)
 }
 
 .card4 {
-    background-color: rgb(0, 204, 204);
+    background-color: rgb(224, 174, 234)
 }
 
 .card5 {
-    background-color: rgb(171, 57, 0);
+    background-color: rgb(224, 174, 234)
 }
 
 .card6 {
-    background-color: rgb(183, 173, 230);
+    background-color: rgb(224, 174, 234)
 }
 
 .btn {

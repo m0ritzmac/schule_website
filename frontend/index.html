@@ -14,7 +14,7 @@
         margin: 0;
         padding: 0;
         height: 100vh;
-        background-image: url('images/bsfh.jpg');
+        /*background-image: url('images/bsfh.jpg');*/
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -31,11 +31,13 @@
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
     }
+
+
 </style>
 <body>
     <div class="header">
         <nav>
-            <img src="images/BSFHLOGO.jpeg">
+            <img src="images/BSFH LOGo.png" style="height: 50%;">
         </nav>
     </div>
 
@@ -45,8 +47,59 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Willkommen an der BSFH</h1>
+            <style>
+                @keyframes typewriter-in {
+                    from {
+                        width: 0;
+                        }
+                    to {
+                        width: 100%;
+                    }
+                }
+            
+                @keyframes typewriter-out {
+                    from {
+                        width: 100%;
+                    }
+                    to {
+                        width: 0;
+                    }
+                }
+            
+                h1 {
+                overflow: hidden;
+                white-space: nowrap;
+                }
+            </style>
+            <title>BSFH Animation</title>
+                <h1><strong>Willkommen an der BSFH</strong></h1>
             <p>Weitere Informationen siehst du unten!</p>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                var h1Element = document.querySelector('h1');
+            
+                function typeText(text, durationIn, durationOut) {
+                    h1Element.textContent = text;
+                    h1Element.style.animation = 'typewriter-in ' + durationIn + 's steps(40) 1s 1 normal both';
+            
+                    setTimeout(function () {
+                        h1Element.style.animation = 'typewriter-out ' + durationOut + 's steps(40) 0.05s 1 normal both';
+                    }, durationIn * 1000 + 3000);
+                }
+            
+                function animateText() {
+                    typeText('Willkommen an der BSFH', 2, 2);
+                    setTimeout(function () {
+                        typeText('Welcome to BSFH', 2, 2);
+                        setTimeout(animateText, 7000);
+                    }, 7000);
+                }
+            
+                    animateText();
+                });
+            </script>
+
         </div>
     </section>
     
@@ -57,9 +110,9 @@
             <div class="card card1" id="1">
                 <div class="card-body">
                     <i class="fa-regular fa-file" style="font-size: 35px; color: white;"></i>
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="notes.html" class="btn btn-primary" style="color: rgb(255, 128, 0);">Go to Notes</a>
+                    <h5 class="card-title">Noten</h5>
+                    <p class="card-text">Schaue hier um deine Noten zu sehen.</p>
+                    <a href="notes.html" class="btn btn-primary" style="color: rgb(224, 174, 234)">Gehe zu den Noten</a>
                 </div>
             </div>
 
@@ -68,7 +121,7 @@
                     <i class="fa-solid fa-bars" style="font-size: 35px; color: white;"></i>
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary" style="color: rgb(255, 204, 0);">Button</a>
+                    <a href="#" class="btn btn-primary" style="color: rgb(224, 174, 234)">Button</a>
                 </div>
             </div>
 
@@ -77,7 +130,7 @@
                     <i class="fa-solid fa-envelope" style="font-size: 35px; color: white;"></i>
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary" style="color: rgb(76, 0, 255);">Button</a>
+                    <a href="#" class="btn btn-primary" style="color: rgb(224, 174, 234);">Button</a>
                 </div>
             </div>
 
@@ -86,7 +139,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary" style="color: rgb(0, 204, 204);">Button</a>
+                    <a href="#" class="btn btn-primary" style="color: rgb(224, 174, 234)">Button</a>
                 </div>
             </div>
 
@@ -95,7 +148,7 @@
                     <i class="fa-solid fa-inbox" style="font-size: 35px; color: white;"></i>
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary" style="color: rgb(171, 57, 0);">Button</a>
+                    <a href="#" class="btn btn-primary" style="color: rgb(224, 174, 234)">Button</a>
                 </div>
             </div>
 
@@ -104,7 +157,7 @@
                     <i class="fa-solid fa-bookmark" style="font-size: 35px; color: white;"></i>
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary" style="color: rgb(183, 173, 230);">Button</a>
+                    <a href="#" class="btn btn-primary" style="color: rgb(224, 174, 234)">Button</a>
                 </div>
             </div>
         </div>
