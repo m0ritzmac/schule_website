@@ -3,10 +3,8 @@ const mongoose = require("mongoose");
 const gradeSchema = mongoose.Schema({
   grade: Number,
   subject: String,
-  teacher: {
-    firstName: String,
-    lastName: String,
-  },
+  teacherFirstName: String,
+  teacherLastName: String,
 });
 
 module.exports = mongoose.model("Grade", gradeSchema);

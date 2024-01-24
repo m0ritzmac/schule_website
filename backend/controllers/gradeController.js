@@ -17,6 +17,8 @@ const setGrade = asyncHandler(async (req, res) => {
   const grade = await Grade.create({
     grade: req.body.grade,
     subject: req.body.subject,
+    teacherFirstName: req.body.teacherFirstName,
+    teacherLastName: req.body.teacherLastName
   });
 
   res.status(200).json({
@@ -55,7 +57,7 @@ const deleteGrade = asyncHandler(async (req, res) => {
     throw new Error("Grade not found");
   }
 
-  await grade.remove();
+  await grade.deleteOne(); ;
 
   res.status(200).json({
     message: `Removed grade ${req.params.id}`,
