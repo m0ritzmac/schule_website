@@ -5,37 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3cd9e6e8d0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/notes.css">
     <title>Notes</title>
+    <style>
+        .input-container {
+            max-width: 85%;
+            margin: 0 auto;
+        }
+
+        .card1 {
+            max-width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        #myIcon {
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<header>
-    <div class="header">
-        <nav>
-            <img src="images/BSFH LOGo.png" style="height: 50%;">
-        </nav>
-
-        <div class="h1-container">
-            <h1>Schulnoten</h1>
-        </div>
-
-        <div class="add-icon">
-            <img src="">
-        </div>
-    </div>
-
-</header>
-
 <body>
-    <div class="wrapper">
-        <div class="card card1" id="1">
-            <div class="card-body">
-                <i class="fa-regular fa-file" style="font-size: 35px; color: white;"></i>
-                <h5 class="card-title"><input type="text" readonly placeholder="Fach..." style="text-decoration: underline; color: white;"></h5>
-                <p>Note <input type="text" readonly placeholder="..." style="width: 2.5%; color: white;"></p>
-                <p>Dies Wurde von Herr/Frau <input type="text" readonly placeholder="Nach- Vorname" style="color: white;"> eingetragen.</p>
-                <!-- <a href="notes.html" class="btn btn-primary">Gehe zu den Noten</a> -->
+    <header>
+        <div class="header d-flex align-items-center">
+            <nav>
+                <img src="images/BSFH LOGo.png" style="height: 50%;">
+            </nav>
+    
+            <div class="h1-container d-flex align-items-center">
+                <h1>Schulnoten</h1>
+                <div class="add-icon">
+                    <i id="myIcon" class="fas fa-plus-square" style="color: white; font-size: 2rem;"></i>
+                    <script>
+                        document.getElementById('myIcon').addEventListener('click', function() {
+                            var inputContainer = document.createElement('div');
+                            inputContainer.classList.add('input-container');
+                            inputContainer.innerHTML = `
+                                <div class="card card1">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><input type="text" placeholder="Fach..." style="text-decoration: underline; color: rgb(197, 197, 197);"></h5>
+                                        <p>Note <input type="text" placeholder="..." style="width: 2.5%; color: rgb(197, 197, 197);"></p>
+                                        <p>Dies wurde von Herr/Frau <input type="text" placeholder="Nach- Vorname" style="color: rgb(197, 197, 197);"> eingetragen.</p>
+                                    </div>
+                                </div>
+                            `;
+
+                            document.body.appendChild(inputContainer);
+                        });
+                    </script>
+                </div>
             </div>
         </div>
+    </header>
+    
+    <div class="wrapper">
+        <!-- Hier können Ihre vorhandenen Noten-Karten bleiben -->
     </div>
 </body>
 </html>
